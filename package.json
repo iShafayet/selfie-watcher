@@ -1,7 +1,34 @@
 {
   "name": "selfie-watcher",
+  "version": "0.0.1",
+  "description": "Take a selfie every time you log in.",
   "main": "main.js",
   "dependencies": {
     "mkdirp": "^0.5.1"
-  }
+  },
+  "devDependencies": {
+    "nwjs-builder-phoenix": "^1.14.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "start": "run --x86 --mirror https://dl.nwjs.io/ ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iShafayet/selfie-watcher.git"
+  },
+  "keywords": [
+    "watch",
+    "selfie",
+    "camera",
+    "photo",
+    "nwjs"
+  ],
+  "author": "Sayem Shafayet <ishafayet@gmail.com> (https://ishafayet.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iShafayet/selfie-watcher/issues"
+  },
+  "homepage": "https://github.com/iShafayet/selfie-watcher#readme"
 }
