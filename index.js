@@ -1,6 +1,6 @@
 
 const config = {
-  dir: './'
+  dir: './../selfies'
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
