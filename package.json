@@ -6,13 +6,9 @@
   "dependencies": {
     "mkdirp": "^0.5.1"
   },
-  "devDependencies": {
-    "nwjs-builder-phoenix": "^1.14.6"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
-    "start": "run --x86 --mirror https://dl.nwjs.io/ ."
+    "start": "nw ."
   },
   "repository": {
     "type": "git",
