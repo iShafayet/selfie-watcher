@@ -4,9 +4,9 @@ const config = {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-
-  cameraController = new CameraController();
-  fileController = new FileController();
+  alert(JSON.stringify(nw.App.argv ))
+  let cameraController = new CameraController();
+  let fileController = new FileController();
   cameraController
     .initialize({
       videoElement: document.querySelector('video')
