@@ -58,3 +58,5 @@ typings/
 .env
 
 WindowsTaskScheduleReady.xml
+build/
+cache/

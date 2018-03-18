@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nw ."
+    "start": "nw .",
+    "dist": "node ./dist-details/dist.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/iShafayet/selfie-watcher/issues"
   },
-  "homepage": "https://github.com/iShafayet/selfie-watcher#readme"
+  "homepage": "https://github.com/iShafayet/selfie-watcher#readme",
+  "devDependencies": {
+    "nw-builder": "^3.5.1"
+  }
 }
