@@ -94,6 +94,10 @@ $(document).ready(() => {
       $('#save_location').val(dir);
     });
 
+    $('#remove-task-schedule-button').on('click', () => {
+      runRemoveTaskSchedule();
+    });
+
     $('#create-task-schedule-button').on('click', () => {
       runRemoveTaskSchedule();
       runImportTaskSchedule();
