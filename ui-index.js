@@ -44,10 +44,10 @@ const runImportTaskSchedule = () => {
 }
 
 let config = null;
+let cameraController = new CameraController();
+let fileController = new FileController();
 
 const previewCamera = (cbfn) => {
-  let cameraController = new CameraController();
-  let fileController = new FileController();
   ConfigController.getConfig()
     .then((_config) => {
       config = _config;
@@ -97,6 +97,24 @@ $(document).ready(() => {
     $('#create-task-schedule-button').on('click', () => {
       runRemoveTaskSchedule();
       runImportTaskSchedule();
+    });
+
+    $('#take-test-selfie-button').on('click', () => {
+      let fileName = null;
+      cameraController.captureImage()
+        .then((imageDataUrl) => {
+          let date = (new Date).getTime() + '-' + (new Date).toString().replace(/\:/g, '-').replace(/ *\([^)]*\) */g, "")
+          fileName = 'auto-selfie-' + date + '.png';
+          return fileController.writeImageDataUrlToFile(imageDataUrl, fileName);
+        })
+        .then(() => {
+          nw.Shell.showItemInFolder(pathlib.join(config.dir, fileName));
+        })
+        .catch((err) => {
+          console.error(err);
+          alert(err.message);
+          // nw.App.quit();
+        });
     });
 
   });
