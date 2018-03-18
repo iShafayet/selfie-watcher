@@ -1,6 +1,5 @@
 
 const configFilePath = './config.json';
-// const fslib = require('fs');
 
 class ConfigController {
 

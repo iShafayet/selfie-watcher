@@ -25,6 +25,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
       alert(err.message);
       nw.App.quit();
     });
-
 });
 
