@@ -9,7 +9,7 @@ if (nw.App.argv.find(arg => arg === '--from-startup')) {
     width: 1000,
     height: 680
   }, (win) => { 
-    win.showDevTools();
+    // win.showDevTools();
   });
 }
 
