@@ -4,7 +4,11 @@ if (nw.App.argv.find(arg => arg === '--from-startup')) {
     // win.showDevTools();
   });
 } else {
-  nw.Window.open('ui-index.html', { show: true }, (win) => { 
+  nw.Window.open('ui-index.html', { 
+    show: true ,
+    width: 1000,
+    height: 680
+  }, (win) => { 
     win.showDevTools();
   });
 }

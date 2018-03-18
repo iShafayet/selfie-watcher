@@ -2,15 +2,143 @@
 <html>
 
 <head>
-  <title>Hello World!</title>
+  <title>Selfie Watcher v0.0.1</title>
+  <!--Import Google Icon Font-->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="camera.js"></script>
   <script src="file.js"></script>
+  <script src="config.js"></script>
   <script src="ui-index.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(fonts/icons.woff2) format('woff2');
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+
+    video {
+      width: 300px;
+      height: auto;
+      /* position: fixed;
+      bottom: 12px;
+      left: 12px; */
+    }
+
+    .brand-logo {
+      margin-left: 8px;
+    }
+
+    a.nocolor {
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hello World!</h1>
-  <video autoplay></video>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Selfie Watcher</a>
+      <ul id="nav-mobile" class="right">
+        <li>
+          <a class="save-button">Save Changes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" style="margin-top: 16px;">
+    <div class="row">
+      <div class="col m6">
+        <video autoplay></video>
+        <blockquote>A simple utility that lets you automatically capture an image with your computers primary camera/webcam when you log in.</blockquote>
+      </div>
+      <div class="col m6">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="save_location" type="text" class="validate" disabled>
+                <!-- <label for="save_location" style="margin-left: 36px;">Saving Images To</label> -->
+              </div>
+              <input type="file" id="select_save_location" type="text" class="validate" nwdirectory>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="waves-effect waves-light btn">
+                  <i class="material-icons right">autorenew</i>Create Windows Startup Task</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="waves-effect waves-light btn">
+                  <i class="material-icons right">dns</i>Add to Startup</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end of container -->
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Selfie Watcher</h5>
+          <p class="grey-text text-lighten-4">Selfie watcher is free and opensource. It is created and maintained by
+            <a class="nocolor" href="https://github.com/ishafayet">Sayem Shafayet</a>
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/iShafayet/selfie-watcher">Help</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/iShafayet/selfie-watcher">Official Website</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/iShafayet/selfie-watcher">Source Code</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="left">&copy;2018&nbsp; All rights reserved
+        </div>
+        <a class="grey-text text-lighten-4 right" href="https://github.com/ishafayet">Sayem Shafayet</a>
+      </div>
+    </div>
+  </footer>
+
+
+
 </body>
 
 </html>
