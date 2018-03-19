@@ -5,7 +5,7 @@
 #define MyAppVersion "0.0.1"
 #define MyAppPublisher "Sayem Shafayet"
 #define MyAppURL "https://github.com/iShafayet/selfie-watcher"
-#define MyAppExeName "nw.exe"
+#define MyAppExeName "selfie-watcher.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -21,7 +21,7 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={userappdata}\{#MyAppName}
 DisableProgramGroupPage=yes
-OutputDir=C:\temp\output
+OutputDir={#SourcePath}\..\build\installers
 OutputBaseFilename=InstallSelfieWatcherWinx64
 Compression=lzma
 SolidCompression=yes
@@ -30,12 +30,12 @@ SolidCompression=yes
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\temp\nwjs-v0.29.1-win-x64\nwjs-v0.29.1-win-x64\nw.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\temp\nwjs-v0.29.1-win-x64\nwjs-v0.29.1-win-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#SourcePath}\..\build\selfie-watcher\win64\selfie-watcher.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#SourcePath}\..\build\selfie-watcher\win64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
