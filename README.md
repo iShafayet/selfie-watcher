@@ -1,5 +1,6 @@
-# selfie-watcher
 ![Capture 1](docs/capture1.png)
+
+# selfie-watcher
 
 [Downloads](https://github.com/iShafayet/selfie-watcher/releases)
 
