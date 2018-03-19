@@ -1,7 +1,9 @@
 # selfie-watcher
-A simple utility that lets you automatically capture an image with your computer's primary camera/webcam when you log in.
-
 ![Capture 1](docs/capture1.png)
+
+[Downloads](https://github.com/iShafayet/selfie-watcher/releases)
+
+A simple utility that lets you automatically capture an image with your computer's primary camera/webcam when you log in.
 
 It supports automatically adding itself (in invisible mode) to the Windows Task Scheduler so that it can run when you (or someone) logs into windows.
 
